@@ -35,10 +35,10 @@ Une fois cela fait, executez le script un première fois:
 ```
 npm run devstart
 ```
-• L'application vous demandera de visiter une URL.
-• Copiez-la, collez-la dans votre navigateur.
-• Sélectionnez le compte Google a associé à l'application
-• Autorisez l'application à accéder à votre compte
-• Un code est généré automatiquement. Copiez-le
-• Collez-le dans votre terminal.
-• Le script s'executera de nouveau en ayant créer un fichier credentials.json
+* L'application vous demandera de visiter une URL.
+* Copiez-la, collez-la dans votre navigateur.
+* Sélectionnez le compte Google a associé à l'application
+* Autorisez l'application à accéder à votre compte
+* Un code est généré automatiquement. Copiez-le
+* Collez-le dans votre terminal.
+* Le script s'executera de nouveau en ayant créer un fichier credentials.json
