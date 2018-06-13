@@ -6,7 +6,8 @@ const OAuth2Client = google.auth.OAuth2;
 //const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
 const SCOPES = ['https://www.googleapis.com/auth/calendar'];
 const TOKEN_PATH = 'credentials.json';
-const CALENDAR_ID = 'octo.com_jbo2ben9ldqrfjpbq7v74bnb4k@group.calendar.google.com';
+const CALENDAR_ID = process.env.GOOGLE_CALENDAR;
+// const CALENDAR_ID = 'octo.com_jbo2ben9ldqrfjpbq7v74bnb4k@group.calendar.google.com';
 //const CALENDAR_ID = 'primary';
 
 

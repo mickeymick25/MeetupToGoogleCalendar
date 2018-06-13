@@ -12,7 +12,7 @@ Il va chercher les meetups qui correspondent aux topics qui intéressent la trib
 Pour le moment, le script doit être lancé à la main, localement, tous les jours pour alimenter le calendrier partagé. Cette solution semble peu satisfaisante dans le temps. Il sera bon d'automatiser cette partie, possiblement avec un CRON;
 sauf si vous avez mieux, je suis preneur...
 
-Comment lancer le script :
+*Comment lancer le script :*
 ```
 npm run devstart
 ```
@@ -23,4 +23,22 @@ il vous faut créer un ficher .env local. Dans le miens j'y ai mis ces informati
 NODE_ENV = 'development'
 MEETUP_KEY = '*** Votre Clé Meetup ***'
 MEETUP_TOPICS = 'expérience utilisateur, ux' // ou tout autre topic qui vous conviendrait
+GOOGLE_CALENDAR = '*** URL du calendrier Google ***' // Par default vous pouvez utiliser 'Primary'
 ```
+
+### Prerequisites Google
+Il vous faut créer des credentials pour l'API de Google et générer un fichier client_secret.json.
+Pour cela le mieux est encore de suivre les instructions Step 1 ici :
+https://developers.google.com/calendar/quickstart/nodejs#prerequisites
+
+Une fois cela fait, executez le script un première fois:
+```
+npm run devstart
+```
+• L'application vous demandera de visiter une URL.
+• Copiez-la, collez-la dans votre navigateur.
+• Sélectionnez le compte Google a associé à l'application
+• Autorisez l'application à accéder à votre compte
+• Un code est généré automatiquement. Copiez-le
+• Collez-le dans votre terminal.
+• Le script s'executera de nouveau en ayant créer un fichier credentials.json
