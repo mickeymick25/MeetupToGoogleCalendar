@@ -48,3 +48,5 @@ Les prochaines étapes seraient selon moi le fait de rendre le script autonome d
 * toutes les heures, à la demi journée, personalisable ?
 
 Quid d'une integration avec Slack ? Afin de poster les meetup ajoutés au calendrier Google aussi dans un channel Meetup.
+
+Reployer cela sur un Raspberry Pi ?
