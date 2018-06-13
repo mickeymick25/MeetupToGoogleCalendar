@@ -1,4 +1,4 @@
-# Meetup Tribe Automation
+# Meetup to Calendar Tribe Automation
 The idea aim to automate meetup flow into a tribe shared google calendar regarding tribe topics.
 
 ## Getting Started
