@@ -42,3 +42,9 @@ npm run devstart
 * Un code est généré automatiquement. Copiez-le
 * Collez-le dans votre terminal.
 * Le script s'executera de nouveau en ayant créer un fichier credentials.json
+
+## What's next ?
+Les prochaines étapes seraient selon moi le fait de rendre le script autonome dans son execution.
+* toutes les heures, à la demi journée, personalisable ?
+
+Quid d'une integration avec Slack ? Afin de poster les meetup ajoutés au calendrier Google aussi dans un channel Meetup.
