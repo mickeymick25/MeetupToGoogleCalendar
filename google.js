@@ -188,33 +188,38 @@ class Google{
    convertMeetupToEvent(meetuptable){
      let eventsTable = [];
 
+
      //on parcourt le tableau des meetup.
      for(let i=0; i<meetuptable.length ; i++){
-       let event = {
-           'summary': meetuptable[i].name,
-           'location': meetuptable[i].venue.name +", "+meetuptable[i].venue.address_1+", "+ meetuptable[i].venue.city,
-           'description': meetuptable[i].description,
-           "creator": {
-             "email": 'mibo@octo.com',
-             "displayName": 'Michael via Ux Tribe Bot'
-           },
-           "organizer": {
-             "displayName": meetuptable[i].group.name
-           },
-           'start': {
-             'dateTime': new Date(meetuptable[i].time),
-             'timeZone': meetuptable[i].group.timezone
-           },
-           'end': {
-             'dateTime': new Date(meetuptable[i].time + meetuptable[i].duration),
-             'timeZone': meetuptable[i].group.timezone
-           },
-           "source": {
-             "url": meetuptable[i].link,
-             "title": 'Meetup'
-           }
-       };
-       eventsTable.push(event);
+       // console.log("meetuptable. name :: " + meetuptable[i].name);
+       // console.log("meetuptable.venue :: " + meetuptable[i].venue);
+       if(meetuptable[i].venue != undefined){
+         let event = {
+             'summary': meetuptable[i].name,
+             'location': meetuptable[i].venue.name +", "+meetuptable[i].venue.address_1+", "+ meetuptable[i].venue.city,
+             'description': meetuptable[i].description,
+             "creator": {
+               "email": 'mibo@octo.com',
+               "displayName": 'Michael via Ux Tribe Bot'
+             },
+             "organizer": {
+               "displayName": meetuptable[i].group.name
+             },
+             'start': {
+               'dateTime': new Date(meetuptable[i].time),
+               'timeZone': meetuptable[i].group.timezone
+             },
+             'end': {
+               'dateTime': new Date(meetuptable[i].time + meetuptable[i].duration),
+               'timeZone': meetuptable[i].group.timezone
+             },
+             "source": {
+               "url": meetuptable[i].link,
+               "title": 'Meetup'
+             }
+         };
+         eventsTable.push(event);
+       }
      }
      //console.log("eventsTable length :: " + eventsTable.length);
      return eventsTable;
