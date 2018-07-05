@@ -1,9 +1,9 @@
 require('dotenv').load();
 const Meetup = require('./meetup');
 const Google = require('./google');
+const isProd = false;
 
 function setupHttp(){
-  try {
     // Load HTTP module
     let http = require("http");
 
@@ -19,15 +19,6 @@ function setupHttp(){
 
     // Print URL for accessing server
     console.log('Server running at http://127.0.0.1:8000/');
-
-    // resolve for callback
-    return "Server http resolved";
-
-  } catch (err) {
-    //logger.error('Http error', err)
-    //return res.status(500).send()
-    return 'Error into the catch block:'+err;
-  }
 }
 
 /**
@@ -38,7 +29,8 @@ function setupHttp(){
 async function init(req, res){
   try {
     if (process.env.NODE_ENV !== 'production') {
-      const _serverhttp = await setupHttp();
+      this.isProd = false;
+      // const _serverhttp = await setupHttp();
       // console.log("_serverhttp  :: "+ _serverhttp);
 
       console.log('\n *** Start fetching upcoming Meetup...');
@@ -51,7 +43,8 @@ async function init(req, res){
 
       console.log('\n *** Start Connecting to Google...');
 
-      const _myGoogle =  new Google(_meetupUxList);
+      // const _myGoogle =  new Google(_meetupUxList);
+      new Google(_meetupUxList);
     }
   }catch (err) {
     //logger.error('Http error', err)
