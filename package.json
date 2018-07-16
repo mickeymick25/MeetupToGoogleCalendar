@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/*.js",
     "devstart": "nodemon ./index.js",
     "start": "node ./index.js"
   },
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.1.2",
     "dotenv": "^5.0.1",
     "googleapis": "^28.1.0",
     "meetup-api": "^1.4.32",
